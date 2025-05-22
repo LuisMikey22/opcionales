@@ -1,4 +1,5 @@
 
+import java.awt.BasicStroke;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -63,6 +64,9 @@ public class MickeyMouse extends JFrame{
 			g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON); //suavizar bordes
 	
 			//manos
+			g2.setColor(Color.pink);
+			g2.setStroke(new BasicStroke(3));
+			
 			g2.setColor(Color.black); //borde
 			g2.fillOval(168, 298, 44, 64);
 			g2.fillOval(288, 298, 44, 64);

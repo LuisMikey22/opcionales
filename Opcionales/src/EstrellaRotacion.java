@@ -1,4 +1,5 @@
 
+import java.awt.BasicStroke;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -85,8 +86,11 @@ public class EstrellaRotacion extends JFrame{
 				g2.rotate(360/i, x, y); 
 
 				//estrella con rotación
+				
 				g2.setColor(new Color(rand.nextInt(255), rand.nextInt(255), rand.nextInt(255))); //color random
 				g2.fillPolygon(xs, ys, 10);
+				g2.setColor(Color.black);
+				g2.setStroke(new BasicStroke(3));
 			}
 			
 		}
