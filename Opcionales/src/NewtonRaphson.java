@@ -38,11 +38,11 @@ public class NewtonRaphson {
 				System.out.print("\nSigno: "); 
 				signo = leer.next(); 
 				
-				System.out.print("\nCoeficiente: "); 
+				System.out.print("Coeficiente: "); 
 				coeficiente = leer.nextInt();
 				
 				
-				System.out.print("\nExponente: "); 
+				System.out.print("Exponente: "); 
 				exponente = leer.nextInt(); 
 				
 				TerminoAlgebraico = new Termino(signo, coeficiente, exponente);
@@ -54,11 +54,11 @@ public class NewtonRaphson {
 		}while(termino.equals("si"));
 		
 		//término independiente
-		System.out.println("\nTérmino independiente: "); 
+		System.out.print("\nTérmino independiente: "); 
 		termIndependiente = leer.nextInt(); 
 		
 		//xn
-		System.out.println("\nxn: "); 
+		System.out.print("\nxn: "); 
 		xn = leer.nextInt();
 		
 		//calcular valores
@@ -76,6 +76,7 @@ public class NewtonRaphson {
 				
 				//imprimir valores
 				System.out.print("\n Iteración: " + iteracion);
+				System.out.print("\n xn: " + xn);
 				System.out.print("\n F(xn): " + fXN);
 				System.out.print("\n F'(xn): " + xnDerivada);
 				
@@ -97,7 +98,7 @@ public class NewtonRaphson {
 				
 			}while(error>tolerancia);
 		}else 
-			System.out.println("No existe raíz");
+			System.out.println("\nNo existe raíz");
 		
 		
 		leer.close();
@@ -128,8 +129,6 @@ public class NewtonRaphson {
 				valor += -termino.getExponente()*termino.getCoeficiente() * (Math.pow(constante, termino.getExponente()-1));
 			}
 		}
-		
-		valor += termIndependiente; //sumar o restar el término independiente
 		
 		return valor;
 	}
